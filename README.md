@@ -61,4 +61,4 @@ python3 web.py
  - select your audio file
  - click 'Upload File'
 
-![alt text](https://git.bknix.co.th/git/kittinan/thodtape_project/raw/f600222fb935da54b68a52e99994fe65bc28afde/example/example_ui.png)
+![example_ui](https://github.com/kitsps/Thodtape/blob/main/example/example_ui.png)
