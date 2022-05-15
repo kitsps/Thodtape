@@ -15,7 +15,7 @@ pip3 install flask_wtf
 pip3 install python-dotenv
 ```
 
-## Config your credentail from cloud providers
+## Config your credential from cloud providers
 
 ```
 cp env.dist .env
