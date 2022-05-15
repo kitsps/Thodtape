@@ -18,7 +18,7 @@ pip3 install python-dotenv
 ## Config your credentail from cloud providers
 
 ```
-cp .env.dist .env
+cp env.dist .env
 cp gcp_key.json.dist gcp_key.json
 ```
 
