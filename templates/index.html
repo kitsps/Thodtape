@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        <center>
+        <!-- Content here -->
+        <h1>Thodtape Project</h1>
+        <br>
+
+        <form method='POST' enctype='multipart/form-data'>
+            {{form.hidden_tag()}}
+            Language : 
+            <select  name="lang" id="lang" >
+                <option value="TH" selected>TH</option>
+                <option value="EN">EN</option>
+            </select>
+            {{form.file()}}
+            {{form.submit()}}
+        </form>
+            <br>
+        
+        <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/overview" target="_blank" >
+            <img src="{{url_for('static', filename='azure.png')}}" alt="Azure Result" height="50"> 
+        </a>
+        <br><br>
+        <!-- <h1>Azure Output</h1> -->
+        <div class="bg-light border rounded-3">
+            <br>
+            <table>
+                <tr>
+                    <td>Filename  :</td>
+                    <td>{{Filename}}</td>
+                </tr>
+                <tr>
+                    <td>Language :</td>
+                    <td>{{Language}}</td>
+                </tr>
+                <tr>
+                    <td>Transcript :</td>
+                    <td>{{azure_translate}}</td>
+                </tr>         
+            </table>
+            <br> 
+
+        </div>
+
+        <br>
+        <a href="https://cloud.google.com/speech-to-text/" target="_blank" >
+        <img src="{{url_for('static', filename='gcp.png')}}" alt="Google Cloud Result" height="100"> 
+        </a>
+        
+        <br><br>
+        <!-- <h1>GCP Output</h1> -->
+        <div class="bg-light border rounded-3">
+            <br>
+
+            <table>
+                <tr>
+                    <td>Filename  :</td>
+                    <td>{{Filename}}</td>
+                </tr>
+                <tr>
+                    <td>Language :</td>
+                    <td>{{Language}}</td>
+                </tr>
+                <tr>
+                    <td>Transcript :</td>
+                    <td>{{gcp_translate}}</td>
+                </tr>         
+            </table>
+            <br> 
+
+        </div>
+
+        <br>
+        <a href="https://ai.iapp.co.th/product/speech_to_text_asr" target="_blank" >
+        <img src="{{url_for('static', filename='iapp.png')}}" alt="Azure Result" height="50" style="background: rgb(49, 65, 177) !important"> 
+        </a>
+        <br><br>
+        <!-- <h1>iApp Output</h1> -->
+        <div class="bg-light border rounded-3">
+            <br>
+            <table>
+                <tr>
+                    <td>Filename  :</td>
+                    <td>{{Filename}}</td>
+                </tr>
+                <tr>
+                    <td>Language :</td>
+                    <td>{{Language}}</td>
+                </tr>
+                <tr>
+                    <td>Transcript :</td>
+                    <td>{{iapp_translate}}</td>
+                </tr>         
+            </table>
+            <br> 
+
+        </div>
+
+        </center>
+    </div>
+</body>
+</html>
